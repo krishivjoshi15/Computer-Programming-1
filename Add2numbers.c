@@ -11,7 +11,8 @@ int main(){
 
     add = num1 + num2;
 
-    printf("The sum of %d abd %d is %d.", num1, num2, add);
+    printf("The sum of %d and %d is %d.", num1, num2, add);
     
     return 0;
+
 }
