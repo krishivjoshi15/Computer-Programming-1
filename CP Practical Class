@@ -1,11 +1,20 @@
 #include <stdio.h>
 int main(){
     // ascending order
-int i,temp,j;
-int num[6] = {25,31,2,6,47,10};
+int i,n,temp,j;
 
-for(i=0;i<6;i++){
-    for(j=i+1;j<6;j++){
+printf("Enter the number of elements in array: ");
+scanf("%d", &n);
+
+int num[n];
+
+for(i=0;i<n;i++){
+    printf("Enter the (%d) element: ", i+1);
+    scanf("%d", &num[i]);
+}
+
+for(i=0;i<n;i++){
+    for(j=i+1;j<n;j++){
         if(num[i]>num[j]){
             temp = num[i];
             num[i] = num[j];
@@ -13,15 +22,15 @@ for(i=0;i<6;i++){
         }
     }
 }
-for(i=0;i<6;i++){
+for(i=0;i<n;i++){
     printf("%d ", num[i]);
 }
 
 // descending order
 
 
-for(i=0;i<6;i++){
-    for(j=i+1;j<6;j++){
+for(i=0;i<n;i++){
+    for(j=i+1;j<n;j++){
         if(num[i]<num[j]){
             temp = num[i];
             num[i] = num[j];
@@ -31,10 +40,9 @@ for(i=0;i<6;i++){
 }
 printf("\n");
 
-for(i=0;i<6;i++){
+for(i=0;i<n;i++){
     printf("%d ", num[i]);
 }
 
 return 0;
 }
-
